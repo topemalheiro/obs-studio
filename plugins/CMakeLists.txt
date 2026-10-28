@@ -117,4 +117,7 @@ add_core_module(win-capture PLATFORMS WINDOWS)
 add_core_module(win-dshow PLATFORMS WINDOWS)
 add_core_module(win-wasapi PLATFORMS WINDOWS)
 
+# Second (vertical) canvas with its own scenes and outputs, built as a regular plugin
+add_subdirectory(obs-vertical-canvas)
+
 set_obs_core_modules()
