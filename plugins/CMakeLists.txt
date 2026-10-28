@@ -117,7 +117,9 @@ add_core_module(win-capture PLATFORMS WINDOWS)
 add_core_module(win-dshow PLATFORMS WINDOWS)
 add_core_module(win-wasapi PLATFORMS WINDOWS)
 
-# Second (vertical) canvas with its own scenes and outputs, built as a regular plugin
+# Second (vertical) canvas with its own scenes and outputs. In-tree modules install to the core module
+# directory, and libobs only loads the ones on the core list, so add it there.
 add_subdirectory(obs-vertical-canvas)
+target_enable(vertical-canvas)
 
 set_obs_core_modules()
